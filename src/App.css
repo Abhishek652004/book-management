@@ -1,38 +1,86 @@
-.App {
-  text-align: center;
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body { font-family: 'Segoe UI', sans-serif; background: #f0f4f8; color: #333; }
+
+.app-header {
+  background: #1a1a2e; color: white;
+  padding: 20px 40px; font-size: 1.5rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-main {
+  display: flex; gap: 30px;
+  padding: 30px 40px; max-width: 1200px; margin: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.book-form {
+  background: white; padding: 24px; border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  display: flex; flex-direction: column; gap: 12px;
+  min-width: 280px; height: fit-content;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.book-form h2 { font-size: 1.2rem; color: #1a1a2e; }
+
+.book-form input {
+  padding: 10px 14px; border: 1px solid #ddd;
+  border-radius: 8px; font-size: 0.95rem; width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.book-form input:focus { outline: none; border-color: #4f46e5; }
+
+.btn-primary {
+  background: #4f46e5; color: white; border: none;
+  padding: 10px; border-radius: 8px; cursor: pointer; font-size: 0.95rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn-primary:hover { background: #4338ca; }
+
+.btn-cancel {
+  background: #e5e7eb; color: #333; border: none;
+  padding: 10px; border-radius: 8px; cursor: pointer;
 }
+
+.list-section { flex: 1; }
+
+.controls { display: flex; gap: 12px; margin-bottom: 20px; }
+
+.search-bar {
+  flex: 1; padding: 10px 14px; border: 1px solid #ddd;
+  border-radius: 8px; font-size: 0.95rem;
+}
+
+.filter-bar {
+  padding: 10px 14px; border: 1px solid #ddd;
+  border-radius: 8px; font-size: 0.95rem;
+}
+
+.book-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.book-card {
+  background: white; padding: 20px; border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  display: flex; flex-direction: column; gap: 8px;
+}
+
+.book-card h3 { color: #1a1a2e; font-size: 1rem; }
+.book-card p { font-size: 0.88rem; color: #555; }
+
+.card-actions { display: flex; gap: 8px; margin-top: 10px; }
+
+.btn-edit {
+  background: #4f46e5; color: white; border: none;
+  padding: 6px 14px; border-radius: 6px; cursor: pointer; flex: 1;
+}
+
+.btn-delete {
+  background: #ef4444; color: white; border: none;
+  padding: 6px 14px; border-radius: 6px; cursor: pointer; flex: 1;
+}
+
+.status { color: #888; padding: 20px 0; }
+.error  { color: #ef4444; margin-bottom: 12px; }
+
+.form-actions { display: flex; gap: 10px; }
